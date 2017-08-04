@@ -47,6 +47,8 @@ return [
     'in_array'             => 'The :attribute field does not exist in :other.',
     'integer'              => 'The :attribute must be an integer.',
     'ip'                   => 'The :attribute must be a valid IP address.',
+    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
+    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => 'The :attribute must be a valid JSON string.',
     'max'                  => [
         'numeric' => 'The :attribute may not be greater than :max.',
@@ -114,6 +116,62 @@ return [
     |
     */
 
-    'attributes' => [],
+    'attributes' => [
+
+        'backend' => [
+            'access' => [
+                'permissions' => [
+                    'associated_roles' => 'Associated Roles',
+                    'dependencies'     => 'Dependencies',
+                    'display_name'     => 'Display Name',
+                    'group'            => 'Group',
+                    'group_sort'       => 'Group Sort',
+
+                    'groups' => [
+                        'name' => 'Group Name',
+                    ],
+
+                    'name'       => 'Name',
+                    'first_name' => 'First Name',
+                    'last_name'  => 'Last Name',
+                    'system'     => 'System',
+                ],
+
+                'roles' => [
+                    'associated_permissions' => 'Associated Permissions',
+                    'name'                   => 'Name',
+                    'sort'                   => 'Sort',
+                ],
+
+                'users' => [
+                    'active'                  => 'Active',
+                    'associated_roles'        => 'Associated Roles',
+                    'confirmed'               => 'Confirmed',
+                    'email'                   => 'E-mail Address',
+                    'name'                    => 'Name',
+                    'last_name'               => 'Last Name',
+                    'first_name'              => 'First Name',
+                    'other_permissions'       => 'Other Permissions',
+                    'password'                => 'Password',
+                    'password_confirmation'   => 'Password Confirmation',
+                    'send_confirmation_email' => 'Send Confirmation E-mail',
+                ],
+            ],
+        ],
+
+        'frontend' => [
+            'email'                     => 'E-mail Address',
+            'first_name'                => 'First Name',
+            'last_name'                 => 'Last Name',
+            'name'                        => 'Full Name',
+            'password'                  => 'Password',
+            'password_confirmation'     => 'Password Confirmation',
+            'phone' => 'Phone',
+            'message' => 'Message',
+            'new_password'              => 'New Password',
+            'new_password_confirmation' => 'New Password Confirmation',
+            'old_password'              => 'Old Password',
+        ],
+    ],
 
 ];
