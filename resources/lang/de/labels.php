@@ -68,8 +68,12 @@ return [
                     'id'             => 'ID',
                     'last_updated'   => 'Letzte Aktualisierung',
                     'name'           => 'Name',
+                    'first_name'     => 'Vorname',
+                    'last_name'      => 'Nachname',
                     'no_deactivated' => 'Keine deaktivierten Benutzer',
                     'no_deleted'     => 'Keine gelöschten Benutzer',
+                    'other_permissions' => 'Andere Berechtigungen',
+                    'permissions' => 'Berechtigungen',
                     'roles'          => 'Rollen',
                     'social' => 'Social',
                     'total'          => 'Benutzer|Benutzer',
@@ -90,6 +94,8 @@ return [
                             'email'        => 'E-mail',
                             'last_updated' => 'Zuletzt aktualisiert',
                             'name'         => 'Name',
+                            'first_name'   => 'Vorname',
+                            'last_name'    => 'Nachname',
                             'status'       => 'Status',
                         ],
                     ],
@@ -120,33 +126,8 @@ return [
             'forgot_password'                 => 'Kennwort vergessen?',
             'reset_password_box_title'        => 'Kennwort zurücksetzen',
             'reset_password_button'           => 'Kennwort zurücksetzen',
+            'update_password_button'           => 'Kennwort aktualisieren',
             'send_password_reset_link_button' => 'Link zum zurücksetzen des Kennworts senden',
-        ],
-
-        'macros' => [
-            'country' => [
-                'alpha'   => 'ISO Länder-Code',
-                'alpha2'  => 'ISO Länder-Code (2 Stellig)',
-                'alpha3'  => 'ISO Länder-Code (3 Stellig)',
-                'numeric' => 'Länder Nummern-Code',
-            ],
-
-            'macro_examples' => 'Makro Beispiele',
-
-            'state' => [
-                'mexico' => 'Mexico Staaten Liste',
-                'us'     => [
-                    'us'       => 'US Staaten',
-                    'outlying' => 'US Überseeterritorien',
-                    'armed'    => 'US-Streitkräfte',
-                ],
-            ],
-
-            'territories' => [
-                'canada' => 'Kanada Provinzen & Territorien Liste',
-            ],
-
-            'timezone' => 'Zeitzone',
         ],
 
         'user' => [
@@ -161,6 +142,8 @@ return [
                 'email'              => 'E-Mail',
                 'last_updated'       => 'Letzte Aktualisierung',
                 'name'               => 'Name',
+                'first_name'         => 'Vorname',
+                'last_name'          => 'Nachname',
                 'update_information' => 'Informationen aktualisieren',
             ],
         ],

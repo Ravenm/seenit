@@ -1,9 +1,8 @@
 <?php
 
-Breadcrumbs::register('admin.dashboard', function ($breadcrumbs) {
-    $breadcrumbs->push('Dashboard', route('admin.dashboard'));
+Breadcrumbs::for('admin.dashboard', function ($trail) {
+    $trail->push(__('strings.backend.dashboard.title'), route('admin.dashboard'));
 });
 
-require __DIR__.'/Search.php';
-require __DIR__.'/Access.php';
-require __DIR__.'/LogViewer.php';
+require __DIR__.'/auth.php';
+require __DIR__.'/log-viewer.php';

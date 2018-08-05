@@ -15,7 +15,7 @@ return [
 
     'backend' => [
         'access' => [
-            'title' => 'Access Management',
+            'title' => 'Access',
 
             'roles' => [
                 'all'        => 'Όλοι οι ρόλοι',
@@ -67,11 +67,14 @@ return [
             'el'    => 'Ελληνικά (Greek)',
             'en'    => 'Αγγλικά (English)',
             'es'    => 'Ισπανικά (Spanish)',
+            'fa'    => 'περσικός (Persian)',
             'fr'    => 'Γαλλικά (French)',
+            'he'    => 'Εβραϊκά (Hebrew)',
             'id'    => 'Ινδονησίας (Indonesian)',
             'it'    => 'Ιταλικά (Italian)',
             'ja'    => '(Japanese)',
             'nl'    => 'Ολλανδικά (Dutch)',
+            'no'    => '(Norwegian)',
             'pt_BR' => '(Brazilian Portuguese)',
             'ru'    => 'Ρωσικός (Russian)',
             'sv'    => 'Σουηδικά (Swedish)',

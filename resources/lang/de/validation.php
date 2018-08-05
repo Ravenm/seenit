@@ -42,6 +42,18 @@ return [
     'exists'               => ':attribute ist ungültig.',
     'file'                 => 'Das :attribute muss eine Datei sein.',
     'filled'               => ':attribute ist erforderlich.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute muss ein Bild sein.',
     'in'                   => ':attribute ist ungültig.',
     'in_array'             => 'Das :attribute-Feld existiert nicht in :other.',
@@ -50,6 +62,18 @@ return [
     'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
     'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => ':attribute muss eine gültige JSON-Zeichenkette sein.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute darf nicht grösser sein als :max.',
         'file'    => ':attribute darf nicht grösser sein als :max Kilobytes.',
@@ -57,6 +81,7 @@ return [
         'array'   => ':attribute darf nicht mehr Einträge enthalten als :max Einträge.',
     ],
     'mimes'                => ':attribute muss eine Datei des folgenden Typs sein: :values.',
+    'mimetypes'            => ':attribute muss eine Datei des folgenden Typs sein: :values.',
     'min'                  => [
         'numeric' => ':attribute muss mindestens :min sein.',
         'file'    => ':attribute muss mindestens :min Kilobytes gross sein.',
@@ -64,6 +89,7 @@ return [
         'array'   => ':attribute muss mindestens :min Einträge enthalten.',
     ],
     'not_in'               => ':attribute ist ungültig.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute muss eine Zahl sein.',
     'present'              => 'Das :attribute-Feld muss vorhanden sein.',
     'regex'                => ':attribute enthält ein ungültiges Format.',
@@ -84,6 +110,7 @@ return [
     'string'               => ':attribute muss eine Zeichenkette sein.',
     'timezone'             => ':attribute muss eine gültige Zeitzone sein.',
     'unique'               => ':attribute ist schon vergeben.',
+    'uploaded'             => ':attribute wurde nicht hochgeladen.',
     'url'                  => ':attribute Format ist ungültig.',
 
     /*
@@ -130,6 +157,8 @@ return [
                     ],
 
                     'name'   => 'Name',
+                    'first_name' => 'Vorname',
+                    'last_name'  => 'Nachname',
                     'system' => 'System?',
                 ],
 
@@ -145,24 +174,31 @@ return [
                     'confirmed'               => 'Bestätigt',
                     'email'                   => 'E-Mailadresse',
                     'name'                    => 'Name',
+                    'last_name'               => 'Vorname',
+                    'first_name'              => 'Nachname',
                     'other_permissions'       => 'Andere Berechtigungen',
                     'password'                => 'Kennwort',
                     'password_confirmation'   => 'Kennwort (Wdh.)',
                     'send_confirmation_email' => 'Bestätigungs E-Mail senden',
+                    'timezone'                  => 'Zeitzone',
                 ],
             ],
         ],
 
         'frontend' => [
+            'avatar'                    => 'Avatar Adresse',
             'email'                     => 'E-Mailadresse',
+            'first_name'                => 'Vorname',
+            'last_name'                 => 'Nachname',
             'name'                      => 'Name',
             'password'                  => 'Kennwort',
             'password_confirmation'     => 'Kennwort (Wdh.)',
             'phone' => 'Phone',
             'message' => 'Message',
-            'old_password'              => 'Altes Kennwort',
             'new_password'              => 'Neues Kennwort',
             'new_password_confirmation' => 'Neues Kennwort (Wdh.)',
+            'old_password'              => 'Altes Kennwort',
+            'timezone'                    => 'Zeitzone',
         ],
     ],
 

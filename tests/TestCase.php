@@ -1,101 +1,67 @@
 <?php
 
-use App\Models\Access\Role\Role;
-use App\Models\Access\User\User;
-use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\App;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Foundation\Testing\DatabaseTransactions;
+namespace Tests;
+
+use App\Models\Auth\Role;
+use App\Models\Auth\User;
+use Spatie\Permission\Models\Permission;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 
 /**
  * Class TestCase.
  */
-abstract class TestCase extends Illuminate\Foundation\Testing\TestCase
+abstract class TestCase extends BaseTestCase
 {
-    use DatabaseTransactions;
+    use CreatesApplication;
 
     /**
-     * The base URL to use while testing the application.
+     * Create the admin role or return it if it already exists.
      *
-     * @var string
+     * @return mixed
      */
-    protected $baseUrl = 'http://l5boilerplate.dev';
-
-    /**
-     * @var
-     */
-    protected $admin;
-
-    /**
-     * @var
-     */
-    protected $executive;
-
-    /**
-     * @var
-     */
-    protected $user;
-
-    /**
-     * @var
-     */
-    protected $adminRole;
-
-    /**
-     * @var
-     */
-    protected $executiveRole;
-
-    /**
-     * @var
-     */
-    protected $userRole;
-
-    /**
-     * Creates the application.
-     *
-     * @return \Illuminate\Foundation\Application
-     */
-    public function createApplication()
+    protected function getAdminRole()
     {
-        $app = require __DIR__.'/../bootstrap/app.php';
+        if ($role = Role::whereName(config('access.users.admin_role'))->first()) {
+            return $role;
+        }
 
-        $app->make(Illuminate\Contracts\Console\Kernel::class)->bootstrap();
+        $adminRole = factory(Role::class)->create(['name' => config('access.users.admin_role')]);
+        $adminRole->givePermissionTo(factory(Permission::class)->create(['name' => 'view backend']));
 
-        return $app;
+        return $adminRole;
     }
 
     /**
-     * Set up tests.
+     * Create an administrator.
+     *
+     * @param array $attributes
+     *
+     * @return mixed
      */
-    public function setUp()
+    protected function createAdmin(array $attributes = [])
     {
-        parent::setUp();
+        $adminRole = $this->getAdminRole();
+        $admin = factory(User::class)->create($attributes);
+        $admin->assignRole($adminRole);
 
-        // Set up the database
-        Artisan::call('migrate:refresh');
-        Artisan::call('db:seed');
-
-        // Run the tests in English
-        App::setLocale('en');
-
-        /*
-         * Create class properties to be used in tests
-         */
-        $this->admin = User::find(1);
-        $this->executive = User::find(2);
-        $this->user = User::find(3);
-        $this->adminRole = Role::find(1);
-        $this->executiveRole = Role::find(2);
-        $this->userRole = Role::find(3);
+        return $admin;
     }
 
-    public function tearDown()
+    /**
+     * Login the given administrator or create the first if none supplied.
+     *
+     * @param bool $admin
+     *
+     * @return bool|mixed
+     */
+    protected function loginAsAdmin($admin = false)
     {
-        $this->beforeApplicationDestroyed(function () {
-            DB::disconnect();
-        });
+        if (! $admin) {
+            $admin = $this->createAdmin();
+        }
 
-        parent::tearDown();
+        $this->actingAs($admin);
+
+        return $admin;
     }
 }

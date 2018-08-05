@@ -64,21 +64,24 @@ return [
                 'table' => [
                     'confirmed'      => 'Confirmé',
                     'created'        => 'Création',
-                    'email'          => 'Email',
+                    'email'          => 'Adresse email',
                     'id'             => 'ID',
                     'last_updated'   => 'Mise à jour',
+                    'name'           => 'Nom',
                     'first_name'     => 'Prénom',
                     'last_name'      => 'Nom',
                     'no_deactivated' => "Pas d'utilisateurs désactivés",
                     'no_deleted'     => "Pas d'utilisateurs supprimés",
+                    'other_permissions' => 'Autres permissions',
+                    'permissions'    => 'Permissions',
                     'roles'          => 'Rôles',
-                    'social' => 'Social',
+                    'social' => 'Réseau social',
                     'total'          => 'utilisateur total|utilisateurs total',
                 ],
 
                 'tabs' => [
                     'titles' => [
-                        'overview' => 'Aperçu',
+                        'overview' => 'Résumé',
                         'history'  => 'Historique',
                     ],
 
@@ -88,15 +91,17 @@ return [
                             'confirmed'    => 'Confirmé',
                             'created_at'   => 'Créé le',
                             'deleted_at'   => 'Supprimé le',
-                            'email'        => 'E-mail',
+                            'email'        => 'Adresse email',
                             'last_updated' => 'Mise à jour',
-                            'name'         => 'Nom',
+                            'name'         => 'Nom complet',
+                            'first_name'   => 'Prénom',
+                            'last_name'    => 'Nom',
                             'status'       => 'Statut',
                         ],
                     ],
                 ],
 
-                'view' => 'Voir utilisateur',
+                'view' => 'Voir un utilisateur',
             ],
         ],
     ],
@@ -113,8 +118,8 @@ return [
         ],
 
         'contact' => [
-            'box_title' => 'Contact Us',
-            'button' => 'Send Information',
+            'box_title' => 'Nous contacter',
+            'button' => 'Envoyer le message',
         ],
 
         'passwords' => [
@@ -122,32 +127,6 @@ return [
             'reset_password_box_title'        => 'Réinitialisation du mot de passe',
             'reset_password_button'           => 'Réinitialiser le mot de passe',
             'send_password_reset_link_button' => 'Envoyer le lien de réinitialisation',
-        ],
-
-        'macros' => [
-            'country' => [
-                'alpha'   => 'Pays Alpha Codes',
-                'alpha2'  => 'Pays Alpha 2 Codes',
-                'alpha3'  => 'Pays Alpha 3 Codes',
-                'numeric' => 'Pays Numéros Codes',
-            ],
-
-            'macro_examples' => 'Exemples de macros',
-
-            'state' => [
-                'mexico' => 'Mexico State List',
-                'us'     => [
-                    'us'       => 'US States',
-                    'outlying' => 'US Outlying Territories',
-                    'armed'    => 'US Armed Forces',
-                ],
-            ],
-
-            'territories' => [
-                'canada' => 'Canada Province & Territories List',
-            ],
-
-            'timezone' => 'Fuseau horaire',
         ],
 
         'user' => [
@@ -159,9 +138,11 @@ return [
                 'avatar'             => 'Avatar',
                 'created_at'         => 'Date de création',
                 'edit_information'   => 'Éditer les informations',
-                'email'              => 'Email',
+                'email'              => 'Adresse email',
                 'last_updated'       => 'Date de mise à jour',
-                'name'               => 'Nom',
+                'name'               => 'Nom complet',
+                'first_name'         => 'Prénom',
+                'last_name'          => 'Nom',
                 'update_information' => 'Mettre à jour les informations',
             ],
         ],
