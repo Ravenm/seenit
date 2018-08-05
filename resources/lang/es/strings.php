@@ -16,9 +16,11 @@ return [
     'backend' => [
         'access' => [
             'users' => [
-                'delete_user_confirm'  => 'Estás seguro de querer eliminar este Usuario de forma permanente? Esto puede producir un error grave en aquéllas partes de la aplicación que hagan referencia al mismo. Proceda con cautela. Esta operación no puede ser revertida.',
-                'if_confirmed_off'     => '(Si la confirmación está desactivada)',
-                'restore_user_confirm' => 'Restaurar este Usuario a su estado original?',
+                'delete_user_confirm'   => 'Estás seguro de querer eliminar este Usuario de forma permanente? Esto puede producir un error grave en aquéllas partes de la aplicación que hagan referencia al mismo. Proceda con cautela. Esta operación no puede ser revertida.',
+                'if_confirmed_off'      => '(Si la confirmación está desactivada)',
+                'no_deactivated'        => 'No hay usuarios desactivados.',
+                'no_deleted'            => 'No hay usuarios eliminados.',
+                'restore_user_confirm'  => 'Restaurar este Usuario a su estado original?',
             ],
         ],
 
@@ -62,9 +64,9 @@ return [
             'results'    => 'Resultados de la busqueda para :query',
         ],
 
-        'welcome' => '<p>Este es tema AdminLTE por <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>. Esta versión no está completa, descargue la versión completa para añadir mas componentes.</p>
-<p>Toda la funcionalidad es de prueba, a excepción de <strong>Administración de acceso</strong> a la izquierda. Esta plantilla viene pre-configurada y funcional para total gestión de usuarios/roles/permisos.</p>
-<p>Tenga presente que esta plantilla sigue estando en desarrollo y puene contener errores. Hare lo que este en mis manos para enmendarlos.</p>
+        'welcome' => '<p>Este es el tema CoreUI por <a href="https://coreui.io/" target="_blank">creativeLabs</a>. Esta versión no está completa, descargue la versión completa para añadir mas componentes.</p>
+<p>Toda la funcionalidad es de prueba, a excepción de la <strong>Administración de acceso</strong> a la izquierda. Esta plantilla viene pre-configurada y funcional para total gestión de usuarios/roles/permisos.</p>
+<p>Tenga presente que esta plantilla sigue estando en desarrollo y puede contener errores. Hare lo que este en mis manos para corregirlos.</p>
 <p>Espero que disfrute y aprecie el trabajo depositado en este proyecto. Por favor, visite <a href="https://github.com/rappasoft/laravel-5-boilerplate" target="_blank">GitHub</a> para mas información o reportar error <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">aquí</a>.</p>
 <p><strong>Este proyecto es muy demandante para mantenerse al día con la frecuencia en que el master branch de laravel va cambiando, por tanto cualquier ayuda será apreciada.</strong></p>
 <p>- Anthony Rappa</p>',
@@ -72,24 +74,24 @@ return [
 
     'emails' => [
         'auth' => [
-            'account_confirmed' => 'Your account has been confirmed.',
-            'error'                   => 'Ups!',
-            'greeting'                => 'Hola!',
-            'regards'                 => 'Saludos,',
-            'trouble_clicking_button' => 'Si está presentando problemas haciendo clic en el botón ":action_text", copia y pega el enlace en su navegador:',
-            'thank_you_for_using_app' => 'Gracias por utilizar nuestra aplicación!',
+            'account_confirmed'         => 'Su cuenta ha sido confirmada.',
+            'error'                     => 'Ups!',
+            'greeting'                  => 'Hola!',
+            'regards'                   => 'Saludos,',
+            'trouble_clicking_button'   => 'Si está presentando problemas haciendo clic en el botón ":action_text", copia y pega el enlace en su navegador:',
+            'thank_you_for_using_app'   => 'Gracias por utilizar nuestra aplicación!',
 
             'password_reset_subject'    => 'Su enlace de reinicio de contraseña',
             'password_cause_of_email'   => 'Usted está recibiendo este correo porque hemos recibido una solicitud de reinicio de contraseña para su cuenta.',
             'password_if_not_requested' => 'Si usted no hizo la solicitud, ninguna acción es requerida.',
             'reset_password'            => 'Pulse aquí para reiniciar su contraseña',
 
-            'click_to_confirm' => 'Pulse aquí para verificar su cuenta:',
+            'click_to_confirm'          => 'Pulse aquí para verificar su cuenta:',
         ],
 
         'contact' => [
-            'email_body_title' => 'You have a new contact form request: Below are the details:',
-            'subject' => 'A new :app_name contact form submission!',
+            'email_body_title' => 'Tiene una nueva solicitud del formulario de contacto: a continuación los detalles:',
+            'subject'          => '¡Nueva solicitud del formulario de contacto :app_name!',
         ],
     ],
 
@@ -104,7 +106,7 @@ return [
 
             'js_injected_from_controller' => 'Javascript inyectado desde el Controlador',
 
-            'using_blade_extensions' => 'Usando las extensiones de Blade',
+            'using_blade_extensions'      => 'Usando las extensiones de Blade',
 
             'using_access_helper' => [
                 'array_permissions'     => 'Uso de Access Helper con lista de nombres de Permisos o ID\'s donde el usuario tiene que tenerlos todos.',
@@ -122,11 +124,15 @@ return [
             'you_can_see_because_permission' => 'Puede ver esto, por que dispone del Permiso \':permission\'!',
         ],
 
+        'general' => [
+            'joined'        => 'Afiliado',
+        ],
+
         'user' => [
-            'change_email_notice' => 'If you change your e-mail you will be logged out until you confirm your new e-mail address.',
-            'email_changed_notice' => 'You must confirm your new e-mail address before you can log in again.',
-            'profile_updated'  => 'Perfil actualizado satisfactoriamente.',
-            'password_updated' => 'Contraseña actualizada satisfactoriamente.',
+            'change_email_notice'  => 'Si cambia su correo electrónico, se cerrará la sesión hasta que confirme su nueva dirección de correo electrónico.',
+            'email_changed_notice' => 'Debe confirmar su nueva dirección de correo electrónico antes de poder iniciar sesión de nuevo.',
+            'profile_updated'      => 'Perfil actualizado satisfactoriamente.',
+            'password_updated'     => 'Contraseña actualizada satisfactoriamente.',
         ],
 
         'welcome_to' => 'Bienvenido a :place',

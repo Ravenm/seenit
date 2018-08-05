@@ -1,17 +1,8 @@
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
 
-// Variables
-@import "variables";
-
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
-
-// Font Awesome
-@import "~font-awesome/scss/font-awesome";
-
-// Helpers
-@import "../helpers";
+@import "../../../../node_modules/bootstrap/scss/bootstrap";
 
 // Global
 @import "global";
@@ -19,6 +10,7 @@
 // Pages
 @import "pages/dashboard";
 
+// Bootstrap Overrides
+@import "custom";
+
 // Plugins
-@import "../plugin/toastr/toastr.scss";
-@import "../plugin/sweetalert/sweetalert.scss";

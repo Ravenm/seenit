@@ -1,4 +1,22 @@
+/**
+ * This bootstrap file is used for both frontend and backend
+ */
+
 window._ = require('lodash');
+window.swal = require('sweetalert2');
+import Popper from 'popper.js/dist/umd/popper.js';
+
+/**
+ * Font Awesome 5
+ */
+import fontawesome from '@fortawesome/fontawesome';
+import solid from '@fortawesome/fontawesome-free-solid';
+import regular from '@fortawesome/fontawesome-free-regular';
+import brands from '@fortawesome/fontawesome-free-brands';
+
+fontawesome.library.add(solid);
+fontawesome.library.add(regular);
+fontawesome.library.add(brands);
 
 /**
  * We'll load jQuery and the Bootstrap jQuery plugin which provides support
@@ -7,9 +25,13 @@ window._ = require('lodash');
  */
 
 try {
-    global.$ = global.jQuery = require('jquery');
+    window.$ = window.jQuery = require('jquery');
 
-    require('bootstrap-sass');
+    // Required for BS4
+    window.Tether = require('tether');
+    window.Popper = Popper;
+
+    require('bootstrap');
 } catch (e) {}
 
 /**
@@ -48,5 +70,7 @@ if (token) {
 
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
-//     key: 'your-pusher-key'
+//     key: process.env.MIX_PUSHER_APP_KEY
+//     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
+//     encrypted: true
 // });

@@ -42,6 +42,18 @@ return [
     'exists'               => 'Het geselecteerde :attribute is ongeldig.',
     'file'                 => ':attribute moet een bestand zijn.',
     'filled'               => ':attribute veld is verplicht.',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute moet een afbeelding zijn.',
     'in'                   => 'geselecteerd :attribute is ongeldig.',
     'in_array'             => ':attribute veld bestaat niet in :other.',
@@ -50,6 +62,18 @@ return [
     'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
     'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
     'json'                 => ':attribute moet een geldige JSON string zijn.',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute mag niet groter zijn dan :max.',
         'file'    => ':attribute mag niet groter zijn dan :max kilobytes.',
@@ -64,6 +88,7 @@ return [
         'array'   => ':attribute moet ten minste :min items bevatten.',
     ],
     'not_in'               => 'Het geselcteerde :attribute is ongeldig.',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute moet numeriek zijn.',
     'present'              => ':attribute veld is verplicht.',
     'regex'                => ':attribute formaat is ongeldig.',
@@ -144,6 +169,8 @@ return [
                     'associated_roles'        => 'Geassocieerde Rollen',
                     'confirmed'               => 'Bevestigd',
                     'email'                   => 'E-mail Adres',
+                    'first_name'              => 'Voornaam',
+                    'last_name'               => 'Achternaam',
                     'name'                    => 'Naam',
                     'other_permissions'       => 'Overige Permissies',
                     'password'                => 'Wachtwoord',
@@ -155,6 +182,8 @@ return [
 
         'frontend' => [
             'email'                     => 'E-mail Adres',
+            'first_name'                => 'Voornaam',
+            'last_name'                 => 'Achternaam',
             'name'                      => 'Naam',
             'password'                  => 'Wachwoord',
             'password_confirmation'     => 'Wachtwoord Bevestiging',

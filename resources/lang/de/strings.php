@@ -18,6 +18,8 @@ return [
             'users' => [
                 'delete_user_confirm'  => 'Bist du dir sicher, dass du diesen Benutzer permanent löschen möchtest? Überall wo die Benutzer-ID referenziert ist, wird es höchstwahrscheinlich zu Fehlern kommen. Fortfahren auf eigenes Risiko. Dies kann nicht rückgängig gemacht werden.',
                 'if_confirmed_off'     => '(Wenn nicht bestätigt)',
+                'no_deactivated' => 'Es gibt keine inaktiven Nutzer.',
+                'no_deleted' => 'Es gibt keine gelöschten Nutzer.',
                 'restore_user_confirm' => 'Benutzer in den Originalzustand wiederherstellen?',
             ],
         ],
@@ -62,7 +64,7 @@ return [
             'results'    => 'Suchergebnisse für :query',
         ],
 
-        'welcome' => '<p>Dies ist das AdminLTE theme von <a href="https://almsaeedstudio.com/" target="_blank">https://almsaeedstudio.com/</a>. Dies ist eine abgestufte Version mit nur den nötigsten Styles und Scripten, damit es läuft. Lade die Vollversion herunter, um Komponenten zum Dashboard hinzufügen zu können.</p>
+        'welcome' => '<p>Dies ist das CoreUI theme von <a href="https://coreui.io/" target="_blank">creativeLabs</a>. Dies ist eine abgestufte Version mit nur den nötigsten Styles und Scripten, damit es läuft. Lade die Vollversion herunter, um Komponenten zum Dashboard hinzufügen zu können.</p>
 <p>Alle Funktionen sind statisch mit Ausnahme der <strong>Benutzer Verwaltung</strong> auf der linken Seite. Dieser Boilerplate kommt mit einer voll funktionsfähigen Zugangskontroll-Bibliothek, um Benutzer/Rollen und Berechtigungen zu verwalten.</p>
 <p>Denken Sie daran, es ist \'work in progress\' und möglicherweise gibt es Fehler oder andere Probleme die ich noch nicht gesehen habe. Ich werde mein Bestes tun, um sie zu beheben, sowie sie gemeldet werden.</p>
 <p>Ich hoffe, du geniesst die Arbeit, die ich hier reingesteckt habe. Bitte besuche die <a href="https://github.com/rappasoft/laravel-5-boilerplate" target="_blank">GitHub</a> Seite für weitere Informationen und meldet alle <a href="https://github.com/rappasoft/Laravel-5-Boilerplate/issues" target="_blank">Fehler hier</a>.</p>
@@ -120,6 +122,10 @@ return [
             'view_console_it_works'          => 'Schaue in die Konsole, du solltest \'it works!\' sehen, welches vom FrontendController@index kommt',
             'you_can_see_because'            => 'Du kannst dies sehen, da du folgende Rolle besitzt \':role\'!',
             'you_can_see_because_permission' => 'Du kannst dies sehen, da du folgende Berechtigung besitzt \':permission\'!',
+        ],
+
+        'general' => [
+            'joined'        => 'Joined',
         ],
 
         'user' => [

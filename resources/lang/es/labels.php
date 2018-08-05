@@ -14,13 +14,14 @@ return [
     */
 
     'general' => [
-        'all'     => 'Todos',
-        'yes'     => 'Sí',
-        'no'      => 'No',
-        'custom'  => 'Personalizado',
-        'actions' => 'Acciones',
-        'active'  => 'Activo',
-        'buttons' => [
+        'all'       => 'Todos',
+        'yes'       => 'Sí',
+        'no'        => 'No',
+        'copyright' => 'Copyright',
+        'custom'    => 'Personalizado',
+        'actions'   => 'Acciones',
+        'active'    => 'Activo',
+        'buttons'   => [
             'save'   => 'Guardar',
             'update' => 'Actualizar',
         ],
@@ -62,17 +63,21 @@ return [
                 'permissions'         => 'Permisos',
 
                 'table' => [
-                    'confirmed'      => 'Confirmado',
-                    'created'        => 'Creado',
-                    'email'          => 'Correo',
-                    'id'             => 'ID',
-                    'last_updated'   => 'Última modificación',
-                    'name'           => 'Nombre',
-                    'no_deactivated' => 'Ningún Usuario desactivado disponible',
-                    'no_deleted'     => 'Ningún Usuario eliminado disponible',
-                    'roles'          => 'Roles',
-                    'social' => 'Social',
-                    'total'          => 'Todos los Usuarios',
+                    'confirmed'         => 'Confirmado',
+                    'created'           => 'Creado',
+                    'email'             => 'Correo',
+                    'id'                => 'ID',
+                    'last_updated'      => 'Última modificación',
+                    'name'              => 'Nombre',
+                    'first_name'        => 'Nombre',
+                    'last_name'         => 'Apellidos',
+                    'no_deactivated'    => 'Ningún Usuario desactivado disponible',
+                    'no_deleted'        => 'Ningún Usuario eliminado disponible',
+                    'other_permissions' => 'Otros Permisos',
+                    'permissions'       => 'Permisos',
+                    'roles'             => 'Roles',
+                    'social'            => 'Cuenta Social',
+                    'total'             => 'Todos los Usuarios',
                 ],
 
                 'tabs' => [
@@ -86,10 +91,12 @@ return [
                             'avatar'       => 'Avatar',
                             'confirmed'    => 'Confirmado',
                             'created_at'   => 'Creación',
-                            'deleted_at'   => 'Deleted At',
+                            'deleted_at'   => 'Eliminación',
                             'email'        => 'E-mail',
                             'last_updated' => 'Última Actualización',
                             'name'         => 'Nombre',
+                            'first_name'   => 'Nombre',
+                            'last_name'    => 'Apellidos',
                             'status'       => 'Estatus',
                         ],
                     ],
@@ -112,41 +119,17 @@ return [
         ],
 
         'contact' => [
-            'box_title' => 'Contact Us',
-            'button' => 'Send Information',
+            'box_title' => 'Contáctenos',
+            'button' => 'Enviar información',
         ],
 
         'passwords' => [
-            'forgot_password'                 => 'Se ha olvidado la contraseña?',
+            'expired_password_box_title'      => 'Tu contraseña a expirado.',
+            'forgot_password'                 => 'Has olvidado la contraseña?',
             'reset_password_box_title'        => 'Reiniciar contraseña',
             'reset_password_button'           => 'Reiniciar contraseña',
+            'update_password_button'          => 'Actualizar contraseña',
             'send_password_reset_link_button' => 'Enviar el correo de verificación',
-        ],
-
-        'macros' => [
-            'country' => [
-                'alpha'   => 'Código Alfa de País',
-                'alpha2'  => 'Código Alfa 2 de País',
-                'alpha3'  => 'Código Alfa 3 de País',
-                'numeric' => 'Código Numérico de País',
-            ],
-
-            'macro_examples' => 'Ejemplos de Macro',
-
-            'state' => [
-                'mexico' => 'Listado de Estados de México',
-                'us'     => [
-                    'us'       => 'Estados Unidos',
-                    'outlying' => 'Territorios Periféricos de Estados Unidos',
-                    'armed'    => 'Fuerzas Armadas de Estados Unidos',
-                ],
-            ],
-
-            'territories' => [
-                'canada' => 'Listado de Provincias y Territorios de Canada',
-            ],
-
-            'timezone' => 'Zonas horarias',
         ],
 
         'user' => [
@@ -161,9 +144,10 @@ return [
                 'email'              => 'Correo',
                 'last_updated'       => 'Última modificación',
                 'name'               => 'Nombre',
+                'first_name'         => 'Nombre',
+                'last_name'          => 'Apellidos',
                 'update_information' => 'Actualizar la información',
             ],
         ],
-
     ],
 ];

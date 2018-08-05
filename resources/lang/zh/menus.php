@@ -60,14 +60,16 @@ return [
          */
         'langs' => [
             'ar'    => '阿拉伯语（Arabic）',
-            'zh'    => '中文（Chinese Simplified）',
-            'zh-TW' => '中文（Chinese Traditional）',
+            'zh'    => '中文-简体（Chinese Simplified）',
+            'zh-TW' => '中文-繁体（Chinese Traditional）',
             'da'    => '丹麦语（Danish）',
             'de'    => '德语（German）',
             'el'    => '希腊语（Greek）',
             'en'    => '英语（English）',
             'es'    => '西班牙语（Spanish）',
+            'fa'    => '波斯语 (Persian)',
             'fr'    => '法语（French）',
+            'he'    => '希伯来语 (Hebrew)',
             'id'    => '印度尼西亚语（Indonesian）',
             'it'    => '意大利语（Italian）',
             'ja'    => '日语（Japanese）',
@@ -76,7 +78,7 @@ return [
             'ru'    => '俄语（Russian）',
             'sv'    => '瑞典语（Swedish）',
             'th'    => '泰语（Thai）',
-            'tr'    => '(Turkish)',
+            'tr'    => '土耳其语(Turkish)',
         ],
     ],
 ];

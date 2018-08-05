@@ -42,14 +42,38 @@ return [
     'exists'               => ':attribute 不存在。',
     'file'                 => ':attribute 必须是文件。',
     'filled'               => ':attribute 不能为空。',
+    'gt'                   => [
+        'numeric' => 'The :attribute must be greater than :value.',
+        'file'    => 'The :attribute must be greater than :value kilobytes.',
+        'string'  => 'The :attribute must be greater than :value characters.',
+        'array'   => 'The :attribute must have more than :value items.',
+    ],
+    'gte'                  => [
+        'numeric' => 'The :attribute must be greater than or equal :value.',
+        'file'    => 'The :attribute must be greater than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be greater than or equal :value characters.',
+        'array'   => 'The :attribute must have :value items or more.',
+    ],
     'image'                => ':attribute 必须是图片。',
     'in'                   => '已选的属性 :attribute 非法。',
     'in_array'             => ':attribute 没有在 :other 中。',
     'integer'              => ':attribute 必须是整数。',
     'ip'                   => ':attribute 必须是有效的 IP 地址。',
-    'ipv4'                 => 'The :attribute must be a valid IPv4 address.',
-    'ipv6'                 => 'The :attribute must be a valid IPv6 address.',
+    'ipv4'                 => ':attribute 必须是合法的 IPv4 地址.',
+    'ipv6'                 => ':attribute 必须是合法的 IPv6 地址.',
     'json'                 => ':attribute 必须是正确的 JSON 格式。',
+    'lt'                   => [
+        'numeric' => 'The :attribute must be less than :value.',
+        'file'    => 'The :attribute must be less than :value kilobytes.',
+        'string'  => 'The :attribute must be less than :value characters.',
+        'array'   => 'The :attribute must have less than :value items.',
+    ],
+    'lte'                  => [
+        'numeric' => 'The :attribute must be less than or equal :value.',
+        'file'    => 'The :attribute must be less than or equal :value kilobytes.',
+        'string'  => 'The :attribute must be less than or equal :value characters.',
+        'array'   => 'The :attribute must not have more than :value items.',
+    ],
     'max'                  => [
         'numeric' => ':attribute 不能大于 :max。',
         'file'    => ':attribute 不能大于 :max kb。',
@@ -65,6 +89,7 @@ return [
         'array'   => ':attribute 至少有 :min 个单元。',
     ],
     'not_in'               => '已选的属性 :attribute 非法。',
+    'not_regex'            => 'The :attribute format is invalid.',
     'numeric'              => ':attribute 必须是一个数字。',
     'present'              => ':attribute 必须存在。',
     'regex'                => ':attribute 格式不正确。',
@@ -101,7 +126,7 @@ return [
 
     'custom' => [
         'attribute-name' => [
-            'rule-name' => 'custom-message',
+            'rule-name' => '定制信息',
         ],
     ],
 
@@ -160,8 +185,8 @@ return [
             'name'                      => '用户名',
             'password'                  => '密码',
             'password_confirmation'     => '确认密码',
-            'phone' => 'Phone',
-            'message' => 'Message',
+            'phone' => '电话',
+            'message' => '消息',
             'old_password'              => '旧密码',
             'new_password'              => '新密码',
             'new_password_confirmation' => '确认新密码',
